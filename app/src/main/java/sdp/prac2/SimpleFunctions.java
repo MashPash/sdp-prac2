@@ -8,6 +8,7 @@ public class SimpleFunctions {
     // Task 3 - Returns TRUE if both brackets are the same and is nested correctly.
     //  By Brandon Filmer - G19F7591
     public static boolean Task3(String sentence){       // The method returns a boolean that accepts a string.
+        
         int count = 0;                                  // The counter is for the ammount of brackets I have gone through.
 
         for(char letter : sentence.toCharArray()){      // For loop that goes through each character in the string.
@@ -20,6 +21,7 @@ public class SimpleFunctions {
                 }                                       // We therefor check if there is still an open bracket and if so we return false else continue.
             }
         }
+
         return count == 0;                              // We check if the count is zero meaning there are an even amount of '(' to ')'.
     }
 

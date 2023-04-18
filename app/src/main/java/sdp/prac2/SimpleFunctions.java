@@ -61,4 +61,5 @@ public class SimpleFunctions {
         return count == 0; // We check if the count is zero meaning there are an even amount of '(' to ')'.
     }
 
+    
 }

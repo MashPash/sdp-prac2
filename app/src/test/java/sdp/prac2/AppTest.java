@@ -73,4 +73,37 @@ class AppTest {
     }
     // ---------------------------------------------------Task 1 Tests END ------------------------------------------------------------\\
 
+    //Task 5 Tests start
+
+    // Tests for Task 5
+    // returns true if the list is sorted
+    @Test void Task5sorted(){
+        //Arrange
+        App classBeingTested = new App();
+        List<Integer> a = Arrays.asList(1, 2, 3, 4);
+
+        boolean expected = true;
+
+        //Act
+        List<Integer> result = SimpleFunctions.Task5(a);
+        
+        //Assert
+        assertIterableEquals(expected, result);
+    }
+
+    // If list a is added up correctly according to index of b
+    @Test void Task5unsorted(){
+        //Arrange
+        App classBeingTested = new App();
+        List<Integer> a = Arrays.asList(4, 1, 3, 2);
+        
+        boolean expected = false;
+        //Act
+        List<Integer> result = SimpleFunctions.Task5(a);
+        
+        //Assert
+        assertIterableEquals(expected, result);
+    }
+
+    //Task 5 tests stop
 }

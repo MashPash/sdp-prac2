@@ -78,4 +78,16 @@ public class SimpleFunctions {
 
         return result;
     }
+
+    //Task 5 -Returns true if a list is sorted
+    //by Cameron Wicks- G20W0388
+    public static boolean Task5(List<Integer> list) {
+        for (int i = 0; i < list.size() - 1; i++) {
+            if (list.get(i) > list.get(i + 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }

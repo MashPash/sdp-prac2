@@ -61,5 +61,24 @@ public class SimpleFunctions {
         return count == 0; // We check if the count is zero meaning there are an even amount of '(' to ')'.
     }
 
-    
+    //Task 4 by Cabe
+    //Method that which accepts lists of integers a and b, and
+    //multiplies the first element of a with the last element of b, then the
+    //second element of a with the second-last element of b, and so on. The
+    //resulting list is returned. If lists are different sizes, return null.
+
+    public static List<Integer> Task4(List<Integer> a, List<Integer> b){
+        List<Integer> result = new ArrayList<Integer>(); //new integer list that stores results
+        
+        if (a.size() != b.size()) {
+            return null; //returns null is list sizes do not match
+        }
+        
+        else{
+            for (int i = 0; i < a.size(); i++){
+                result.add(a.get(i) * b.get((b.size() - 1) - i)); //Multiplies list values from each list accordingly
+            }
+            return result; //returns resultant list
+        }
+    }
 }

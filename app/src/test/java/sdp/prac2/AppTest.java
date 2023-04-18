@@ -20,7 +20,7 @@ class AppTest {
         List<Integer> expected = Arrays.asList(14, 20, 18, 8);
 
         //Act
-        List<Integer> result = classBeingTested.Task4(a, b);
+        List<Integer> result = SimpleFunctions.Task4(a, b);
         
         //Assert
         assertIterableEquals(expected, result);
@@ -34,11 +34,43 @@ class AppTest {
         List<Integer> b = Arrays.asList(1, 3, 5, 7,9);
 
         //Act
-        List<Integer> result = classBeingTested.Task4(a, b);
+        List<Integer> result = SimpleFunctions.Task4(a, b);
         
         //Assert
         assertIterableEquals(null, result);
     }
     // ---------------------------------------------------Task 4 Tests END ------------------------------------------------------------\\
+     
+     // Tests for Task 1 - g20w0388
+    // If list a is added up correctly according to index of b
+    @Test void Task1AddUp(){
+        //Arrange
+        App classBeingTested = new App();
+        List<Integer> a = Arrays.asList(2, 4, 6, 8);
+        List<Integer> b = Arrays.asList(1, 2, 3, 7);
+
+        int expected = 18;
+
+        //Act
+        List<Integer> result = SimpleFunctions.Task1(a, b);
         
+        //Assert
+        assertIterableEquals(expected, result);
+    }
+
+    // If list a is added up correctly according to index of b
+    @Test void Task1Diff(){
+        //Arrange
+        App classBeingTested = new App();
+        List<Integer> a = Arrays.asList(2, 4, 6, 8);
+        List<Integer> b = Arrays.asList(0, 1, 2, 3);
+        int expected = 20;
+        //Act
+        List<Integer> result = SimpleFunctions.Task1(a, b);
+        
+        //Assert
+        assertIterableEquals(expected, result);
+    }
+    // ---------------------------------------------------Task 1 Tests END ------------------------------------------------------------\\
+
 }

@@ -61,4 +61,21 @@ public class SimpleFunctions {
         return count == 0; // We check if the count is zero meaning there are an even amount of '(' to ')'.
     }
 
+    // Task 4 filler - by ChatGPT
+    public static List<Integer> Task4(List<Integer> a, List<Integer> b) {
+        // check if the lists are of the same size
+        if (a.size() != b.size()) {
+            return null;
+        }
+
+        List<Integer> result = new ArrayList<Integer>();
+        int size = a.size();
+
+        // multiply the elements of the two lists and add to the result
+        for (int i = 0; i < size; i++) {
+            result.add(a.get(i) * b.get(size - i - 1));
+        }
+
+        return result;
+    }
 }

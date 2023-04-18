@@ -20,7 +20,7 @@ class AppTest {
         List<Integer> expected = Arrays.asList(14, 20, 18, 8);
 
         //Act
-        List<Integer> result = classBeingTested.Task4(a, b);
+        List<Integer> result = SimpleFunctions.Task4(a, b);
         
         //Assert
         assertIterableEquals(expected, result);
@@ -34,7 +34,7 @@ class AppTest {
         List<Integer> b = Arrays.asList(1, 3, 5, 7,9);
 
         //Act
-        List<Integer> result = classBeingTested.Task4(a, b);
+        List<Integer> result = SimpleFunctions.Task4(a, b);
         
         //Assert
         assertIterableEquals(null, result);
